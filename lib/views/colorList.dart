@@ -9,7 +9,7 @@ class ColorList extends StatelessWidget {
   Widget build(BuildContext context) {
     var size= MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: colors[randomNumber(0, 11)]["color"],
+      backgroundColor: Colors.white70,
       body: Center(
         child: Container(
           width: size.width*0.9,

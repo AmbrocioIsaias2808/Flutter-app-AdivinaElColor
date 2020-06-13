@@ -30,19 +30,19 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     var size= MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: colors[randomNumber(0, 11)]["color"],
+      backgroundColor: Colors.white70,
       body: Center(
         child: Container(
           width: size.width*0.9,
           height: size.height*0.9,
           child: Card(
-            elevation: 10,
+            elevation: 20,
             child: Padding(
               padding: EdgeInsets.all(20),
               child: Column(
                 children: <Widget>[
                   Text("Adivina el Color", textAlign: TextAlign.center, style: TextStyle(fontSize: size.height*0.05, fontWeight: FontWeight.bold),),
-                  Text("EL JUEGO", textAlign: TextAlign.center, style: TextStyle(fontSize: size.height*0.03, fontWeight: FontWeight.bold),),
+                  Text("DIBULINK", textAlign: TextAlign.center, style: TextStyle(fontSize: size.height*0.03, fontWeight: FontWeight.bold),),
                   SizedBox(height: 50,),
                   RaisedButton(child: Text("JUGAR", style: TextStyle(color: Colors.white),), onPressed: (){
                     Navigator.pushNamed(context, "/Game");
