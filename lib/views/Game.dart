@@ -34,7 +34,7 @@ class _GameState extends State<Game> {
   void preloadAudio(){
      List<String> AudioNames = List<String>();
      colors.forEach((element) {
-       AudioNames.add("audios/${element['name']}.mp3");
+       AudioNames.add("audios/${element['name']}.mp4");
      });
      audioCache.loadAll(AudioNames);
   }
@@ -87,7 +87,7 @@ class _GameState extends State<Game> {
         });
 
         _Scaffoldkey.currentState.showSnackBar(SnackBar(content: Text('Lo lograste!!!!!!!!!!!!!'), backgroundColor: Colors.green,));
-        audioPlayer = await audioCache.play("audios/${_RandColor['name']}.mp3");
+        audioPlayer = await audioCache.play("audios/${_RandColor['name']}.mp4");
         audioPlayer.onPlayerCompletion.listen((event) {
           setState(() {
             _RandColor=colors[randomNumber(0, 11)];
@@ -110,7 +110,7 @@ class _GameState extends State<Game> {
           });
           _Scaffoldkey.currentState.showSnackBar(SnackBar(content: Text('El color era: ${_RandColor["name"]}'), backgroundColor: Colors.green,));
 
-          audioPlayer = await audioCache.play("audios/${_RandColor['name']}.mp3");
+          audioPlayer = await audioCache.play("audios/${_RandColor['name']}.mp4");
           audioPlayer.onPlayerCompletion.listen((event) {
             setState(()async {
               await countDownTimer();
@@ -133,7 +133,7 @@ class _GameState extends State<Game> {
 
         _Scaffoldkey.currentState.showSnackBar(SnackBar(content: Text('El color era: ${_RandColor["name"]}'), backgroundColor: Colors.green,));
         setState(() {_Text.text=_RandColor["name"]; guess=2; win=false;});
-            audioPlayer = await audioCache.play("audios/${_RandColor['name']}.mp3");
+            audioPlayer = await audioCache.play("audios/${_RandColor['name']}.mp4");
             audioPlayer.onPlayerCompletion.listen((event) {
               setState(()async {
                 await countDownTimer();
